@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+    <link rel="stylesheet" href="stylesC.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="text" id="inputText">
+            <button type="button" onclick="cambiarContenido()">Cambiar Contenido</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function cambiarContenido() {
+            var inputTextValue = document.getElementById('inputText').value;
+            var resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerText = 'Nuevo Contenido: ' + inputTextValue;
+            resultadoDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

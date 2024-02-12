@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesI.css">
+</head>
+<body>
+    <h1>Mi Página</h1>
+    <p id="userInput">El usuario dice:</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var titulo = document.querySelector('h1');
+            titulo.textContent = 'Hola, DOM';
+
+            var boton = document.createElement('button');
+            boton.textContent = 'Actualizar Párrafo';
+            document.body.appendChild(boton);
+
+            var areaTexto = document.createElement('textarea');
+            document.body.appendChild(areaTexto);
+
+            boton.addEventListener('click', function() {
+                var nuevoTexto = areaTexto.value;
+                var userInput = document.getElementById('userInput');
+                if (userInput !== null) {
+                    userInput.textContent = 'El usuario dice: ' + nuevoTexto;
+                } else {
+                    userInput = document.createElement('p');
+                    userInput.id = 'userInput';
+                    userInput.textContent = 'El usuario dice: ' + nuevoTexto;
+                    document.body.insertBefore(userInput, boton);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

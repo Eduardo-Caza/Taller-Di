@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(15deg, #ADD8E6, #FFA07A);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Color del botón */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el cursor */
+}
+
+#resultado {
+    display: none; /* Ocultar el resultado inicialmente */
+    margin-top: 20px; /* Espacio entre el resultado y el botón */
+}
